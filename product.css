@@ -1,0 +1,162 @@
+:root {
+	--dark-cyan: hsl(158, 36%, 37%);
+	--dark-blue: hsl(212, 21%, 14%);
+	--grey-blue: hsl(228, 12%, 48%);
+	--cream: #f3eae3;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Montserrat";
+	font-weight: 500;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--cream);
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background-color: white;
+	width: 600px;
+	border-radius: 12px;
+}
+
+.product-image {
+	background-image: url("images/image-product-desktop.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 12px 0 0 12px;
+}
+
+.product-content {
+	padding: 1rem 2rem;
+	color: var(--grey-blue);
+}
+
+.product-content h5 {
+	text-transform: uppercase;
+	color: var(--grey-blue);
+	letter-spacing: 5px;
+	margin-bottom: 0;
+	font-size: 0.7rem;
+	opacity: 0.7;
+}
+
+.product-content h3 {
+	font-family: "Fraunces";
+	font-size: 2.1rem;
+	line-height: 1;
+	margin-top: 1rem;
+	color: var(--dark-blue);
+}
+
+.product-content p {
+	font-size: 0.9rem;
+	line-height: 1.6;
+	letter-spacing: -0.2px;
+}
+
+.pricing {
+	margin-bottom: 1rem;
+	display: flex;
+	flex: 1;
+}
+
+.pricing .dealprice {
+	margin: 0;
+	font-family: "Fraunces";
+
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--dark-cyan);
+}
+
+.pricing .mrp {
+	font-size: 0.8rem;
+	margin-left: 1rem;
+	text-decoration: line-through;
+}
+
+button {
+	outline: none;
+	border: none;
+	background-color: var(--dark-cyan);
+	color: white;
+	box-shadow: none;
+	padding: 0.9rem 1.5rem;
+	border-radius: 10px;
+	width: 100%;
+	cursor: pointer;
+	font-size: 1.04rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: 1rem;
+}
+
+button:hover {
+	background-color: #1a4031;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+footer {
+	display: none;
+}
+
+@media screen and (max-width: 475px) {
+	main {
+		display: flex;
+		flex-direction: column;
+		width: 95%;
+	}
+
+	.product-image {
+		background-image: url("images/image-product-mobile.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 12px 12px 0 0;
+		padding: 9rem 0;
+	}
+
+	.product-content h3 {
+		font-size: 2.75rem;
+		margin-bottom: 0.7rem;
+	}
+
+	.product-content > p {
+		font-size: 1.2rem;
+	}
+	.pricing .dealprice {
+		font-size: 3rem;
+	}
+	.pricing .mrp {
+		font-size: 1.3rem;
+	}
+
+	button {
+		padding: 1.5rem 1rem;
+		font-size: 1.2rem;
+	}
+
+	button img {
+		width: 20px;
+	}
+}
