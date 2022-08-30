@@ -20,7 +20,12 @@
 	</head>
 	<body>
 		<main class="product-card" role="main">
-			<div class="product-image" role="img" aria-label="Perfume product image"></div>
+			<div class="product-image" role="img" aria-label="Perfume product image">
+				<picture>
+					<source media="(max-width:475px)" srcset="images/image-product-mobile.jpg" />
+					<img src="images/image-product-desktop.jpg" alt="perfuem product image" />
+				</picture>
+			</div>
 			<div class="product-content" role="region" aria-label="product information and pricing">
 				<h5>Perfume</h5>
 				<h3>Gabrielle Essence Eau De Parfum</h3>
